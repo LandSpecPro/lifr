@@ -1,0 +1,48 @@
+.navbar{
+	border-radius: 0px !important;
+	background-color: #428bca;
+}
+
+.navbar-brand{
+	color: #fff;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  color: #000;
+  background-color: #fff;
+}
+
+.navbar-nav > li > a{
+	color: #fff;
+}
+
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+  color: #000;
+  background-color: #fff;
+}
+
+/*.navbar-fixed-bottom{
+	height:25px;
+	min-height:5px;
+	max-height:25px;
+}*/
+
+/** STYLES FOR HOME/INDEX **/
+
+#indexCarousel,
+#indexCarouselInner,
+#indexCarouselItem{
+	max-height: 600px;
+}
+
+#indexCarousel{
+	margin-top:-20px;
+}
+
+/** STYLES FOR SIDEBAR **/
+.sidebar-btn-group{
+	width: 100%;
+}

@@ -1,0 +1,6 @@
+== Things To Do
+
+Set up Gems.
+Set up Bootstrap.
+
+Make a minimal way of doing the gems and bootstrap. I don't want to use bootstrap gems, I just want to try the new Bootstrap 3 and place it in the javascript like normal.

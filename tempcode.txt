@@ -1,0 +1,65 @@
+
+
+<!--
+		<div class="row">
+		
+			<div class="col-lg-4 col-lg-offset-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						Nice to meet you<span class="badge pull-right" style="background-color:white; color:black;">51</span>
+					</div>
+					<p>This is some intro text. Enjoy it.</p>
+				</div>
+			</div>
+
+		</div>
+-->
+
+<div id="indexCarousel" class="carousel slide">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#indexCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#indexCarousel" data-slide-to="1"></li>
+		<li data-target="#indexCarousel" data-slide-to="2"></li>
+	</ol>
+
+	<!-- Wrapper for Slides -->
+	<div id="indexCarouselInner" class="carousel-inner">
+
+		<!-- First Slide -->
+		<div id="indexCarouselItem" class="item active">
+			<img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-frc1/920282_1224431066125_272194816_o.jpg" alt="Marshmallow" width="100%"/>
+			<div class="carousel-caption">
+				<h3>This is the Marshmallow Man</h3>
+				<p>You can see his is very large and big and squishy.</p>
+			</div>
+		</div>
+
+		<!-- Second Slide -->
+		<div id="indexCarouselItem" class="item">
+			<img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc1/903339_1221241266382_1059057320_o.jpg" alt="Pierce the Veil" width="100%"/>
+			<div class="carousel-caption">
+				<h3>Pierce the Veil</h3>
+				<p>Great ass concert. I liked it a lot. They did a good job.</p>
+			</div>
+		</div>
+
+		<!-- Third Slide -->
+		<div id="indexCarouselItem" class="item">
+			<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/664886_1194920568381_464003012_o.jpg" alt="Tiger" width="100%"/>
+			<div class="carousel-caption">
+				<h3>Tiger</h3>
+				<p>No Lions or Bears I'm afarid. But <a href="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/664886_1194920568381_464003012_o.jpg">this again...</a></p>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Controls -->
+	<a class="left carousel-control" href="#indexCarousel" data-slide="prev">
+		<span class="icon-prev"></span>
+	</a>
+	<a class="right carousel-control" href="#indexCarousel" data-slide="next">
+		<span class="icon-next"></span>
+	</a>
+</div>
