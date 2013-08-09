@@ -1,0 +1,36 @@
+<div class="col-12 col-lg-4 pull-right">
+	<div class="panel panel-primary" style="height:100%;">
+		<div class="panel-heading text-center">
+			<h1 class="panel-title">Your Stats</h1>
+		</div>
+		<p>
+			<div class="text-center">
+				<strong>Username</strong>
+				<button type="button" class="btn btn-default" disabled="disabled" style="width:100%">something</button>
+			</div>
+			
+			<br/>
+
+			<strong>HP: <%= User.all.first.health.to_s + '/' + User.all.first.max_health.to_s %></strong>
+			<div class="progress">
+				<div class="progress-bar progress-bar-danger" style="width: <%= User.all.first.health.to_s + '%' %>"></div>
+			</div>		
+
+			<strong>MP: 100/100</strong>
+			<div class="progress">
+				<div class="progress-bar" style="width: 100%"></div>
+			</div>
+
+			<strong>Exp to Next Level: 8/100</strong>
+			<div class="progress">
+				<div class="progress-bar progress-bar-success" style="width: 8%"></div>
+			</div>
+
+			<div class="btn-group-vertical sidebar-btn-group">
+				<button type="button" class="btn btn-default">Travel</button>
+				<button type="button" class="btn btn-default">Shop</button>
+				<button type="button" class="btn btn-default">Logout</button>
+			</div>
+		</p>
+	</div>
+</div>
