@@ -36,6 +36,23 @@
 					<div class="progress-bar progress-bar-success" style="width: <%= @hero.exp_current.to_s + '%' %>"></div>
 				</div>
 
+				<div class="accordion" id="heroInventory">
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#heroInventory" href="#collapseInventory">
+								Inventory
+							</a>
+						</div>
+						<div id="collapseInventory" class="accordion-body collapse">
+							<div class="accordion-inner">
+								<a href="#" class="list-group-item">Steel Sword</a>
+								<a href="#" class="list-group-item"><span class="badge">51</span>Apple</a>
+								<a href="#" class="list-group-item">Steel Helm</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="btn-group-vertical sidebar-btn-group">
 					<a type="button" class="btn btn-default">Travel</a>
 					<a type="button" class="btn btn-default">Shop</a>
