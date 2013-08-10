@@ -2,15 +2,32 @@ LifrTest::Application.routes.draw do
 
   root :to => 'home#index'
 
+  # Other URLS
+  match 'logout' => 'user_sessions#destroy'
+
+  # Home URLS
   match 'index' => 'home#index'
   match 'home' => 'home#index'
   match 'about' => 'home#about'
   match 'contact' => 'home#contact'
 
+  # Dashboard USL
+  match 'dashboard' => 'dashboard#main'
+  match 'activity' => 'dashboard#activity'
+
+  # Hero URLS
+  match 'hero/new' => 'heros#new'
+  match 'hero/view' => 'heros#view'
+
+  resources :users do
+      resources :heros
+  end
 
 
-  #DELETE
-  match 'damage' => 'home#damage'
+  resources :user_sessions
+
+
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

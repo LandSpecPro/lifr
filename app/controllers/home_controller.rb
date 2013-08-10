@@ -2,7 +2,15 @@ class HomeController < ApplicationController
 
 	# Home Page
 	def index
-		@indexactive = 'active'
+		if current_user
+			redirect_to dashboard_url
+			return
+		else
+			@indexactive = 'active'
+			@logintab = 'active'
+			@user = User.new
+			@user_session = UserSession.new
+		end
 	end
 
 	# About Page

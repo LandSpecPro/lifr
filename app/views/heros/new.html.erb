@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row">
+
+		<div class="col-lg-6 col-lg-offset-3">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Create Your First Hero</h3>
+				</div>
+
+				<%= form_for [current_user, @hero] do |f| %>
+					<fieldset>
+
+						<div class="text-center">
+
+							<% @hero.errors.full_messages.each do |msg| %>
+								<div class="alert alert-danger">
+									<%= msg %>
+								</div>
+							<% end %>
+
+							<div class="form-group col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+								<!--[if lt IE 10]>Hero Name<![endif]-->
+								<%= f.text_field :name, :class => 'form-control', :placeholder => 'Hero Name' %>
+							</div>
+
+							<div class="form-group col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+								<!--[if lt IE 10]>Class<![endif]-->
+								<%= f.text_field :class_type, :class => 'form-control', :placeholder => 'Class' %>
+							</div>
+
+							<button type="submit" class="btn btn-primary col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-4">Submit</button>
+
+					</fieldset>
+				<% end %>
+
+			</div>
+		</div>
+		
+	</div>
+</div>

@@ -2,40 +2,93 @@
 
 	<div class="row">
 
+		<br/><br/><br/><br/>
+
 		<div class="col-lg-6 col-lg-offset-3">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title text-center">Welcome to Lifr</h3>
 				</div>
 
+				<ul class="nav nav-tabs nav-justified">
 
-					<form class="form">
+					<li class="<%= @logintab %>"><a href="#tabLogin" data-toggle="tab">Login</a></li>
 
-						<fieldset>
+					<li class="<%= @registertab %>"><a href="#tabRegister" data-toggle="tab">Register</a></li>
 
-							<legend>Login</legend>
+				</ul>
 
-							<div class="text-center">
+				<br/>
 
-								<!--[if lt IE 10]>Email or Username<![endif]-->
-								<div class="form-group col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
-									<input type="text" class="form-control " id="email" placeholder="Enter Email or Username">
-								</div>
+				<div class="tab-content">
+					<div class="tab-pane <%= @logintab %>" id="tabLogin">
+						<%= form_for @user_session do |f| %>
+							<fieldset>
 
-								<!--[if lt IE 10]>Password<![endif]-->
-								<div class="form-group col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
-									<input type="text" class="form-control " id="password" placeholder="Enter Password">
-								</div>
+								<div class="text-center">
 
-								<div>
+									<% @user_session.errors.full_messages.each do |msg| %>
+										<div class="alert alert-danger">
+											<%= msg %>
+										</div>
+									<% end %>
+
+									<div class="form-group col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+										<!--[if lt IE 10]>Username or Email<![endif]-->
+										<%= f.text_field :username, :class => 'form-control', :placeholder => 'Username or Email' %>
+									</div>
+
+									<div class="form-group col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+										<!--[if lt IE 10]>Password<![endif]-->
+										<%= f.password_field :password, :class => 'form-control', :placeholder => 'Password' %>
+									</div>
+
 									<button type="submit" class="btn btn-primary col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-4">Submit</button>
+
+							</fieldset>
+						<% end %>
+					</div>
+					<div class="tab-pane <%= @registertab %>" id="tabRegister">
+						<%= form_for @user do |f| %>
+							<fieldset>
+
+								<div class="text-center">
+
+									<% @user.errors.full_messages.each do |msg| %>
+										<div class="alert alert-danger">
+											<%= msg %>
+										</div>
+									<% end %>
+
+									<div class="form-group col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+										<!--[if lt IE 10]>Username<![endif]-->
+										<%= f.text_field :username, :class => 'form-control', :placeholder => 'Username' %>
+									</div>
+
+									<div class="form-group col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+										<!--[if lt IE 10]>Email<![endif]-->
+										<%= f.text_field :email, :class => 'form-control', :placeholder => 'Email' %>
+									</div>
+
+									<div class="form-group col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+										<!--[if lt IE 10]>Password<![endif]-->
+										<%= f.password_field :password, :class => 'form-control', :placeholder => 'Password' %>
+									</div>
+
+									<div class="form-group col-lg-6 col-lg-offset-3 col-sm-6 col-sm-offset-3">
+										<!--[if lt IE 10]>Confirm Password<![endif]-->
+										<%= f.password_field :password_confirmation, :class => 'form-control', :placeholder => 'Confirm Password' %>
+									</div>
+
+									<button type="submit" class="btn btn-primary col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-4">Submit</button>
+
 								</div>
 
-							</div>
+							</fieldset>
+						<% end %>
+					</div>
 
-						</fieldset>
-
-					</form>
+				</div>
 
 			</div>		
 		</div>

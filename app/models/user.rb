@@ -1,7 +1,15 @@
 class User < ActiveRecord::Base
-  attr_accessible :login, :password
+    attr_accessible :crypted_password, :email, :password_salt, :persistence_token, :username, :password, :password_confirmation, :hero_attributes
 
-  # Validate numbers never go below 0
-  validates :health, :numericality => { :greater_than_or_equal_to => 0 }
-  
+	#Authlogic Authentication
+	acts_as_authentic
+
+	#Relations
+	has_one :hero
+	accepts_nested_attributes_for :hero
+
+  	def self.find_by_username_or_email(login)
+	  User.find_by_username(login) || User.find_by_email(login)
+	end
+
 end
